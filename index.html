@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
@@ -16,8 +17,9 @@
             <a href="#home" class="navbar-brand">Prof. Preetam Kumar</a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li class="dropdown" id="publications-dropdown">
-                    <a href="#" id="publications-toggle">Publications</a>
+                <!-- <li class="dropdown" id="publications-dropdown">
+                    <a href="#" id="publications-toggle" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
                     <ul class="dropdown-menu" id="publications-menu">
                         <li><a href="#research">Research</a></li>
                         <li><a href="#conference-responsibilities">Conference Responsibilities</a></li>
@@ -27,13 +29,15 @@
                         <li><a href="#conference-publications">Conference</a></li>
                         <li><a href="#book-chapters">Book Chapters</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li><a href="#about">About</a></li>
                 <li><a href="#phd-students">Students</a></li>
+                <li><a href="#presentations-abroad">Presentation</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#presentations-abroad">Presentation</a></li>
+                <li><a href="#patent-section">Publications</a></li>
             </ul>
+            
             <div class="menu-toggle" id="menu-toggle">
                 <div class="hamburger"></div>
             </div>
@@ -288,7 +292,7 @@
                         <h4>Adarsh Ravi</h4>
                         <p class="research-area">AI/ML based Initial Access and Beam Management for B5G and 6G Networks.
                         </p>
-                        <p class="year">Enrolled: 2020 | Expected: 2028</p>
+                        <p class="year">Enrolled: 2020 | Expected Completion: 2025</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -297,7 +301,7 @@
                         <h4>Shubham Anand</h4>
                         <p class="research-area">Low complexity receiver design for Multicarrier Wireless Communication
                         </p>
-                        <p class="year">Enrolled: 2020 | Expected: 2025</p>
+                        <p class="year">Enrolled: 2020 | Expected Completion: 2025</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -306,7 +310,7 @@
                         <h4>Simmi Perveen</h4>
                         <p class="research-area">RIS-assisted full duplex communication for next generation
                             communication </p>
-                        <p class="year">Enrolled: 2020 | Expected: 2025</p>
+                        <p class="year">Enrolled: 2020 | Expected Completion: 2025</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -314,7 +318,7 @@
                         </div>
                         <h4>Ashish</h4>
                         <p class="research-area">NOMA, IRS , V2X communication</p>
-                        <p class="year">Enrolled: 2020 | Expected: 2025</p>
+                        <p class="year">Enrolled: 2020 | Expected Completion: 2025</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -322,7 +326,7 @@
                         </div>
                         <h4>Manjeet Singh</h4>
                         <p class="research-area">Communication and Radar Identification</p>
-                        <p class="year">Enrolled: 2020 | Expected: 2025</p>
+                        <p class="year">Enrolled: 2020 | Expected Completion: 2026</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -331,7 +335,7 @@
                         <h4>Sushant Kumar Jha</h4>
                         <p class="research-area">Application of ZCZ sequences in next generation wireless communication
                         </p>
-                        <p class="year">Enrolled: 2021 | Expected: 2026</p>
+                        <p class="year">Enrolled: 2021 | Expected Completion: 2026</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -339,7 +343,7 @@
                         </div>
                         <h4>Deepak Kumar</h4>
                         <p class="research-area"> Automated Methods of Speech Signal Processing</p>
-                        <p class="year">Enrolled: 2022 </p>
+                        <p class="year">Enrolled: 2022 | Expected Completion: 2026</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -347,7 +351,7 @@
                         </div>
                         <h4>Uttama Kumari</h4>
                         <p class="research-area">Postioning and Localisation for next Generation Communication </p>
-                        <p class="year">Enrolled: 2023 | Expected: 2028</p>
+                        <p class="year">Enrolled: 2023 | Expected Completion: 2028</p>
                     </div>
                     <div class="phd-card">
                         <div class="student-image-container">
@@ -356,7 +360,7 @@
                         </div>
                         <h4>Krishna Mohan Roy</h4>
                         <!-- <p class="research-area">Physical Layer Security in 5G Networks</p>
-                        <p class="year">Enrolled: 2018 | Expected: 2024</p> -->
+                        <p class="year">Enrolled: 2018 | Expected Completion: 2024</p> -->
                     </div>
 
                     <div class="phd-card">
@@ -366,7 +370,7 @@
                         </div>
                         <h4>Lucky Kumar</h4>
                         <!-- <p class="research-area">Physical Layer Security in 5G Networks</p>
-                        <p class="year">Enrolled: 2018 | Expected: 2024</p> -->
+                        <p class="year">Enrolled: 2018 | Expected Completion: 2024</p> -->
                     </div>
                 </div>
             </div>
@@ -1309,7 +1313,7 @@
                     <span><i class="fas fa-users"></i> Conference Proceedings</span>
                     <i class="fas fa-chevron-down collapsible-icon"></i>
                 </div>
-                <div class="collapsible-content">
+                <div class="collapsible-content ">
                     <div class="publication-list">
                         <div class="publication-item">
                             <h3 class="publication-title">A Novel AI-Powered Approach for Narrow Beam Management in 5G
@@ -1769,7 +1773,7 @@
                     <i class="fas fa-chevron-down collapsible-icon"></i>
                 </div>
                 <div class="collapsible-content">
-                    <div class="publication-list">
+                    <div class="publication-list ">
                         <div class="publication-item">
                             <h3 class="publication-title">Computationally Efficient Scheduling Schemes for Multiple
                                 Antenna Systems Using Evolutionary Algorithms and Swarm Optimization</h3>
@@ -1824,8 +1828,8 @@
                             class="fab fa-linkedin"></i></a>
                     <a href="https://scholar.google.com/citations?user=K2vluC0AAAAJ&hl=en"
                         aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
-                    <a href="#" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+                    <!-- <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                    <a href="#" aria-label="ORCID"><i class="fab fa-orcid"></i></a> -->
                 </div>
             </div>
             <div class="footer-section">
@@ -1833,7 +1837,7 @@
                 <ul class="contact-info">
                     <li><i class="fas fa-envelope"></i> pkumar@iitp.ac.in <br> preetamkumar72@gmail.com</li>
                     <li><i class="fas fa-phone"></i> +91-900 699 3774 <br> +91 6115 233 048</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Professor, Department of Electrical Engineering<br>IIT
+                    <li><i class="fas fa-map-marker-alt"></i>Block 3, Department of Electrical Engineering<br>IIT
                         Patna, Bihar
                         801106</li>
                     <li><i class="fas fa-globe"></i> www.iitp.ac.in/~pkumar</li>
@@ -1862,7 +1866,7 @@
 
     <script>
 
-        
+
         // Enhanced Mobile Dropdown Functionality
         document.addEventListener('DOMContentLoaded', function () {
             const publicationsDropdown = document.getElementById('publications-dropdown');
