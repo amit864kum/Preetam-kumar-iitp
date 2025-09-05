@@ -1481,33 +1481,3 @@ body {
         margin-bottom: 8px;
     }
 }
-/* --- FIX: Make Collapsible Sections Always Open on Mobile --- */
-@media (max-width: 768px) {
-
-    /* Force the content area to be visible */
-    .collapsible-content {
-        max-height: none; /* Removes the height limit that hides it */
-        overflow: visible;  /* Ensures content is not clipped */
-        
-        /* We need to re-add padding here because the .active class isn't used */
-        padding: 20px 15px; 
-    }
-
-    /* Hide the dropdown arrow, since it no longer does anything */
-    .collapsible-header .collapsible-icon {
-        display: none;
-    }
-    
-    /* Make the header look less like a clickable button */
-    .collapsible-header {
-        cursor: default;
-    }
-
-    /* Also, re-apply the text-wrapping fix from before, just in case */
-    .publication-title,
-    .publication-authors,
-    .publication-venue {
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
-}
