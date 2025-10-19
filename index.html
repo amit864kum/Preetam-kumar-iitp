@@ -11,27 +11,47 @@
 
 
 <body>
+    
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="navbar-brand">Prof. Preetam Kumar</a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle">Research <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#research">Research Areas</a></li>
+                        <li><a href="#Our_Sponsors">Our Sponsors</a></li>
+                        <li><a href="#sponsored-projects">Sponsored Projects</a></li>
+                        <li><a href="#projects">Research Projects</a></li>
+                        
+                    </ul>
+                </li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#phd-students">Students</a></li>
-                <li><a href="#presentations-abroad">Presentation</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#patent-section">Publications</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle">Publications <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#patent-section">Patents</a></li>
+                        <li><a href="#journal-publications">Journal Papers</a></li>
+                        <li><a href="#conference-publications">Conference Publications</a></li>
+                        <li><a href="#book-chapters">Book Chapter</a></li>
+                    </ul>
+                </li>
             </ul>
-
             <div class="menu-toggle" id="menu-toggle">
                 <div class="hamburger"></div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+
+    <!-- Hero Section  start -->
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
@@ -86,8 +106,110 @@
             </div>
         </div>
     </section>
+    <!-- Hero section end -->
 
-    <!-- Research Section -->
+    <!-- Department | Carousel | News Section start -->
+    <section class="dept-info-section">
+        <div class="dept-container">
+            <!-- About Department -->
+            <div class="about-text scrollable-about">
+                <div class="scroll-progress"></div>
+                <div class="about-scroll-content">
+                    <div class="about-wcrl">
+                        <h3>About WCRL</h3>
+                        <p>The Wireless Communication Research Lab (WCRL) at IIT Patna, led by Prof. Preetam Kumar in
+                            the
+                            Department of Electrical Engineering, is committed to advancing the field of next-generation
+                            wireless communication systems through both theoretical and experimental research. The lab
+                            primarily focuses on addressing open challenges at the physical layer, aiming to enhance
+                            communication efficiency, reliability, and adaptability in complex and dynamic wireless
+                            environments. </p><br>
+
+                        <p>WCRL’s research covers a broad range of modern technologies, including Reconfigurable
+                            Intelligent
+                            Surface (RIS)-assisted communication, Index Modulation (IM), Orthogonal Frequency Division
+                            Multiplexing (OFDM), and Integrated Sensing and Communication (ISAC). In addition to
+                            conventional signal processing techniques, the lab also integrates Artificial Intelligence
+                            (AI)
+                            and Machine Learning (ML) methods into wireless system design and optimization. These
+                            data-driven approaches are applied for tasks such as channel estimation, resource
+                            allocation,
+                            beamforming, and network adaptation, enabling intelligent and adaptive communication
+                            frameworks.
+                            The research workflow at WCRL typically begins with mathematical modeling and analytical
+                            validation, followed by simulation-based evaluation using statistical and AI/ML-based system
+                            models. Once the theoretical models are verified, the team transitions to hardware
+                            implementation using platforms like the NI-PXI (National Instruments PXIe) machine for
+                            real-time
+                            testing and prototyping.</p><br>
+                        <p>WCRL is actively engaged in several government-sponsored projects and industry
+                            collaborations,
+                            focusing on technology development and transfer to practical applications. The lab has also
+                            filed multiple patents and consistently publishes high-quality research in leading journals
+                            and
+                            conferences. Through its interdisciplinary work combining signal processing, wireless
+                            communication, and AI-driven design, WCRL continues to play a vital role in shaping the
+                            future
+                            of intelligent and energy-efficient communication systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Image Carousel -->
+            <div class="dept-box image-carousel">
+                <div class="carousel-wrapper">
+                    <img src="img/DSC_0019.jpg" class="carousel-image active">
+                    <img src="img/DSC_0126.jpg" class="carousel-image">
+                    <img src="img/DSC_0146.jpg" class="carousel-image">
+                    <img src="img/DSC_0369.jpg" class="carousel-image">
+                    <img src="img/DSC_9572.jpg" class="carousel-image">
+                    <img src="img/DSC_9728.jpg" class="carousel-image">
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+
+                    <!-- Progress Bar -->
+                    <div class="carousel-progress">
+                        <span class="progress-dot active"></span>
+                        <span class="progress-dot"></span>
+                        <span class="progress-dot"></span>
+                        <span class="progress-dot"></span>
+                        <span class="progress-dot"></span>
+                        <span class="progress-dot"></span>
+                        <!-- IF YOU ADD MORE IMAGE ABOVE THEN YOU HAVE TO MUST INCREASE THE PROGRESS DOT, JUST SIMPLY COPY AND PASTE THE ABOVE LINE... -->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- News & Events -->
+            <div class="dept-box news-events">
+                <h3>News & Events</h3>
+                <div class="news-wrapper">
+                    <p>🎓 PhD Admissions 2025 – Now Open at IIT Patna</p>
+                    <p>📢 IEEE INDICON 2024 – Prof. Preetam Kumar as General Chair</p>
+                    <p>🏆 Best Paper Award – IEEE GLOBECOM 2023</p>
+                    <p>🤝 MoU signed with NTU Singapore for collaborative research</p>
+                    <p>🎓 PhD Admissions 2025 – Now Open at IIT Patna</p>
+                    <p>📢 IEEE INDICON 2024 – Prof. Preetam Kumar as General Chair</p>
+                    <p>🏆 Best Paper Award – IEEE GLOBECOM 2023</p>
+                    <p>🤝 MoU signed with NTU Singapore for collaborative research</p>
+                    <p>🎓 PhD Admissions 2025 – Now Open at IIT Patna</p>
+                    <p>📢 IEEE INDICON 2024 – Prof. Preetam Kumar as General Chair</p>
+                    <p>🏆 Best Paper Award – IEEE GLOBECOM 2023</p>
+                    <p>🤝 MoU signed with NTU Singapore for collaborative research</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Department | Carousel | News Section start -->
+
+
+    <!-- Research Section start -->
     <section class="section" id="research">
         <div class="container">
             <h2 class="section-title">Research Areas</h2>
@@ -261,7 +383,7 @@
             <div class="phd-toggle-container">
                 <button class="toggle-btn active" id="ongoing-btn" onclick="togglePhdList('ongoing')">
                     <i class="fas fa-user-graduate"></i>
-                    Ongoing PhD Students (10)
+                    Current PhD Students (10)
                 </button>
                 <button class="toggle-btn" id="completed-btn" onclick="togglePhdList('completed')">
                     <i class="fas fa-graduation-cap"></i>
@@ -616,6 +738,58 @@
             </div>
         </div>
     </section>
+
+    <!-- OUR SPONSORED PROJECTS SECTION START  -->
+
+    <section class="section" id="Our_Sponsors">
+        <div class="container">
+            <h2 class="section-title">Our Sponsors</h2>
+
+
+            <div class="sponsored-container">
+                <button class="sponsored-nav-btn sponsored-prev" aria-label="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="sponsored-grid">
+                    <div class="sponsored-item">
+                        <img src="" alt="Sponsored 1">
+                        <p>SERB and DST</p>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src="" alt="Sponsored 2">
+                        <p>DRDO</p>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src="" alt="Sponsored 3">
+                        <p>ISRO</p>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src="" alt="Sponsored 4">
+                        <p>DST FIST</p>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src="" alt="Sponsored 5">
+                        <p>Ministry of Environment</p>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src=" " alt="Sponsored 6">
+                        <p>HSFC ISRO</p>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src=" " alt="Sponsored 7">
+                        <p>IRDE, DRDO</p>
+                    </div>
+                </div>
+
+                <button class="sponsored-nav-btn sponsored-next" aria-label="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR SPONSORED PROJECTS SECTION END -->
 
     <!-- Current Sponsored Projects Section -->
     <section class="section" id="sponsored-projects">
@@ -2060,125 +2234,54 @@
 
     <script>
 
+        // ====================== Navbar Dropdown (Click-based) ======================
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-        // Enhanced Mobile Dropdown Functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const publicationsDropdown = document.getElementById('publications-dropdown');
-            const publicationsToggle = document.getElementById('publications-toggle');
-            const publicationsMenu = document.getElementById('publications-menu');
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            // Mobile dropdown toggle
-            if (window.innerWidth <= 968) {
-                publicationsToggle.addEventListener('click', function (e) {
-                    e.preventDefault();
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener("click", e => {
                     e.stopPropagation();
+                    const parent = toggle.parentElement;
 
-                    // Toggle active state
-                    publicationsDropdown.classList.toggle('active');
-                    publicationsMenu.classList.toggle('active');
+                    // Close all other dropdowns
+                    document.querySelectorAll(".dropdown").forEach(d => {
+                        if (d !== parent) d.classList.remove("open");
+                    });
+
+                    // Toggle clicked dropdown
+                    parent.classList.toggle("open");
                 });
+            });
 
-                // Close dropdown when clicking outside
-                document.addEventListener('click', function (e) {
-                    if (!publicationsDropdown.contains(e.target)) {
-                        publicationsDropdown.classList.remove('active');
-                        publicationsMenu.classList.remove('active');
-                    }
-                });
-            }
-
-            // Handle window resize
-            window.addEventListener('resize', function () {
-                if (window.innerWidth > 968) {
-                    // Reset mobile dropdown states
-                    publicationsDropdown.classList.remove('active');
-                    publicationsMenu.classList.remove('active');
+            // Close dropdown when clicking outside
+            document.addEventListener("click", e => {
+                if (!e.target.closest(".dropdown")) {
+                    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
                 }
+            });
+
+            // Close dropdown when clicking on a dropdown link
+            document.querySelectorAll(".dropdown-menu a").forEach(link => {
+                link.addEventListener("click", () => {
+                    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
+                });
             });
         });
 
-        // PhD Students Toggle Functionality
-        function togglePhdList(type) {
-            const ongoingBtn = document.getElementById('ongoing-btn');
-            const completedBtn = document.getElementById('completed-btn');
-            const ongoingList = document.getElementById('ongoing-phd');
-            const completedList = document.getElementById('completed-phd');
-
-            if (type === 'ongoing') {
-                ongoingBtn.classList.add('active');
-                completedBtn.classList.remove('active');
-
-                completedList.classList.add('hidden');
-                setTimeout(() => {
-                    ongoingList.classList.remove('hidden');
-                }, 250);
-            } else {
-                completedBtn.classList.add('active');
-                ongoingBtn.classList.remove('active');
-
-                ongoingList.classList.add('hidden');
-                setTimeout(() => {
-                    completedList.classList.remove('hidden');
-                }, 250);
-            }
-        }
-
-        // Collapsible Sections Functionality
-        function toggleCollapsible(header) {
-            const content = header.nextElementSibling;
-            const icon = header.querySelector('.collapsible-icon');
-
-            header.classList.toggle('active');
-            content.classList.toggle('active');
-
-            if (content.classList.contains('active')) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            } else {
-                content.style.maxHeight = '0';
-            }
-        }
-
-        // Mobile menu toggle functionality
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        // ======  Navbar Scroll Shadow
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 20) navbar.classList.add("scrolled");
+            else navbar.classList.remove("scrolled");
         });
 
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 968) {
-                    closeMobileMenu();
-                }
-            });
-        });
+        // === Mobile Navbar Toggle
+        const menuToggle = document.getElementById("menu-toggle");
+        const navMenu = document.getElementById("nav-menu");
 
-        function closeMobileMenu() {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-
-            // Also close dropdown if open
-            const publicationsDropdown = document.getElementById('publications-dropdown');
-            const publicationsMenu = document.getElementById('publications-menu');
-            publicationsDropdown.classList.remove('active');
-            publicationsMenu.classList.remove('active');
-        }
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
         });
 
         // Smooth scrolling for navigation links
@@ -2196,109 +2299,96 @@
             });
         });
 
-        // Enhanced horizontal scroll functionality
-        class HorizontalScrollManager {
-            constructor(scrollId) {
-                this.scrollId = scrollId;
-                this.wrapper = document.querySelector(`[data-scroll="${scrollId}"]`)?.closest('.scroll-wrapper');
-                if (!this.wrapper) return;
+        // ===== Carousel Functionality
+        const carouselImages = document.querySelectorAll(".carousel-image");
+        const progressDots = document.querySelectorAll(".progress-dot");
+        const prevBtn = document.querySelector(".carousel-btn.prev");
+        const nextBtn = document.querySelector(".carousel-btn.next");
 
-                this.scrollContainer = this.wrapper.querySelector('.horizontal-scroll');
-                this.leftBtn = this.wrapper.querySelector('.scroll-btn.left');
-                this.rightBtn = this.wrapper.querySelector('.scroll-btn.right');
+        let currentIndex = 0;
 
-                const firstCard = this.scrollContainer.querySelector('.card');
-                if (firstCard) {
-                    const cardStyle = getComputedStyle(firstCard);
-                    this.cardWidth = parseFloat(cardStyle.flexBasis) + 30;
-                } else {
-                    this.cardWidth = 380;
-                }
+        function showImage(index) {
+            carouselImages.forEach((img, i) => {
+                img.classList.toggle("active", i === index);
+                progressDots[i]?.classList.toggle("active", i === index);
+            });
+        }
 
-                this.init();
-            }
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % carouselImages.length;
+            showImage(currentIndex);
+        }
 
-            init() {
-                this.updateButtonVisibility();
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+            showImage(currentIndex);
+        }
 
-                this.leftBtn.addEventListener('click', () => {
-                    this.scrollLeft();
-                });
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener("click", nextImage);
+            prevBtn.addEventListener("click", prevImage);
+        }
 
-                this.rightBtn.addEventListener('click', () => {
-                    this.scrollRight();
-                });
+        // Auto slide every 5 seconds
+        setInterval(nextImage, 5000);
 
-                this.scrollContainer.addEventListener('scroll', () => {
-                    this.updateButtonVisibility();
-                });
+        // ====== Scroll Animation for Sections
+        const sections = document.querySelectorAll(".section");
 
-                window.addEventListener('resize', () => {
-                    this.updateButtonVisibility();
-                });
-            }
+        function revealSections() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) { section.classList.add("visible"); }
+            });
+        }
+        window.addEventListener("scroll", revealSections); revealSections(); // PhD Students Toggle Functionality
+        function togglePhdList(type) {
+            const ongoingBtn = document.getElementById('ongoing-btn'); const
+                completedBtn = document.getElementById('completed-btn'); const ongoingList = document.getElementById('ongoing-phd');
+            const completedList = document.getElementById('completed-phd'); if (type === 'ongoing') {
+                ongoingBtn.classList.add('active'); completedBtn.classList.remove('active');
+                completedList.classList.add('hidden'); setTimeout(() => {
+                    ongoingList.classList.remove('hidden');
+                }, 250);
+            } else {
+                completedBtn.classList.add('active');
+                ongoingBtn.classList.remove('active');
 
-            scrollLeft() {
-                this.scrollContainer.scrollBy({
-                    left: -this.cardWidth,
-                    behavior: 'smooth'
-                });
-            }
-
-            scrollRight() {
-                this.scrollContainer.scrollBy({
-                    left: this.cardWidth,
-                    behavior: 'smooth'
-                });
-            }
-
-            updateButtonVisibility() {
-                const { scrollLeft, scrollWidth, clientWidth } = this.scrollContainer;
-
-                if (scrollLeft <= 0) {
-                    this.leftBtn.classList.add('hidden');
-                } else {
-                    this.leftBtn.classList.remove('hidden');
-                }
-
-                if (scrollLeft + clientWidth >= scrollWidth - 1) {
-                    this.rightBtn.classList.add('hidden');
-                } else {
-                    this.rightBtn.classList.remove('hidden');
-                }
+                ongoingList.classList.add('hidden');
+                setTimeout(() => {
+                    completedList.classList.remove('hidden');
+                }, 250);
             }
         }
 
-        // Initialize scroll managers
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                new HorizontalScrollManager('research');
-                new HorizontalScrollManager('projects');
-                new HorizontalScrollManager('teaching');
-            }, 100);
-        });
 
-        // Enhanced scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+        // Collapsible Sections Functionality
+        function toggleCollapsible(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.collapsible-icon');
+
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+
+            if (content.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = '0';
+            }
+        }
+
+        // ====== Horizontal Scroll (Research, Projects, Teaching)
+        document.querySelectorAll(".scroll-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-scroll");
+                const scrollContainer = document.getElementById(`${targetId}-scroll`);
+                const scrollAmount = 400;
+
+                if (btn.classList.contains("left")) scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+                else scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
             });
-        }, observerOptions);
-
-        // Observe sections for animations
-        document.querySelectorAll('.section').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.8s ease';
-            observer.observe(el);
         });
 
         // Stats counter animation
@@ -2336,31 +2426,6 @@
         // Observe stats sections
         document.querySelectorAll('.stats, .profile-stats').forEach(stats => {
             statsObserver.observe(stats);
-        });
-
-        // Keyboard accessibility
-        document.querySelectorAll('.toggle-btn').forEach(btn => {
-            btn.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    btn.click();
-                }
-            });
-        });
-
-        document.querySelectorAll('.collapsible-header').forEach(header => {
-            header.setAttribute('tabindex', '0');
-            header.setAttribute('role', 'button');
-            header.setAttribute('aria-expanded', 'false');
-
-            header.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleCollapsible(header);
-                    header.setAttribute('aria-expanded',
-                        header.classList.contains('active') ? 'true' : 'false');
-                }
-            });
         });
 
         // Scroll to top functionality
@@ -2404,6 +2469,112 @@
                 scrollToTopBtn.style.visibility = 'hidden';
             }
         });
+
+
+        // News ticker with hover pause
+        const newsItems = document.querySelectorAll('.news-wrapper p');
+        let nIndex = 0;
+        let ticker = setInterval(rollNews, 3000);
+        function rollNews() {
+            newsItems.forEach((n, i) => n.style.transform = `translateY(${(i - nIndex) * 100}%)`);
+            nIndex = (nIndex + 1) % newsItems.length;
+        }
+        document.querySelector('.news-wrapper').addEventListener('mouseenter', () => clearInterval(ticker));
+        document.querySelector('.news-wrapper').addEventListener('mouseleave', () => ticker = setInterval(rollNews, 3000));
+
+        // ✅ Smooth News Ticker (no gaps)
+        const newsWrapper = document.querySelector('.news-wrapper');
+        if (newsWrapper) {
+            const newsItems = Array.from(newsWrapper.querySelectorAll('p'));
+            let nIndex = 0;
+
+            function rollNews() {
+                newsItems.forEach((item, i) => {
+                    const offset = (i - nIndex) * 100;
+                    item.style.transform = `translateY(${offset}%)`;
+                });
+                nIndex = (nIndex + 1) % newsItems.length;
+            }
+
+            // Start ticker
+            let ticker = setInterval(rollNews, 3000);
+
+            // Pause on hover
+            newsWrapper.addEventListener('mouseenter', () => clearInterval(ticker));
+            newsWrapper.addEventListener('mouseleave', () => {
+                ticker = setInterval(rollNews, 3000);
+            });
+        }
+
+
+
+
+        // SPONSORED SECTION START
+        document.addEventListener('DOMContentLoaded', function () {
+            const sponsoredGrid = document.querySelector('.sponsored-grid');
+            const prevBtn = document.querySelector('.sponsored-prev');
+            const nextBtn = document.querySelector('.sponsored-next');
+
+            let currentPosition = 0;
+            const scrollStep = 250; // Width of one item
+            let autoScrollInterval;
+
+            function updateSponsoredPosition(direction) {
+                const items = document.querySelectorAll('.sponsored-item');
+                const totalWidth = items.length * scrollStep;
+                const maxScroll = Math.max(0, totalWidth - sponsoredGrid.clientWidth + scrollStep);
+
+                if (direction === 'next') {
+                    if (currentPosition >= maxScroll - scrollStep) {
+                        currentPosition = 0;
+                    } else {
+                        currentPosition += scrollStep;
+                    }
+                } else {
+                    currentPosition = Math.max(currentPosition - scrollStep, 0);
+                }
+
+                sponsoredGrid.style.transform = `translateX(-${currentPosition}px)`;
+
+                // Update button visibility
+                prevBtn.style.display = currentPosition > 0 ? 'flex' : 'none';
+                nextBtn.style.display = currentPosition < maxScroll - scrollStep ? 'flex' : 'none';
+            }
+
+            // Auto scroll function
+            function startAutoScroll() {
+                stopAutoScroll();
+                autoScrollInterval = setInterval(() => {
+                    updateSponsoredPosition('next');
+                }, 2000);
+            }
+
+            function stopAutoScroll() {
+                if (autoScrollInterval) {
+                    clearInterval(autoScrollInterval);
+                }
+            }
+
+            // Navigation buttons
+            prevBtn.addEventListener('click', () => {
+                stopAutoScroll();
+                updateSponsoredPosition('prev');
+            });
+
+            nextBtn.addEventListener('click', () => {
+                stopAutoScroll();
+                updateSponsoredPosition('next');
+            });
+
+            // Initialize
+            updateSponsoredPosition(currentPosition);
+            startAutoScroll();
+
+            // Pause auto scroll on hover
+            sponsoredGrid.addEventListener('mouseenter', stopAutoScroll);
+            sponsoredGrid.addEventListener('mouseleave', startAutoScroll);
+        });
+        // SPONSORED SECTION END
     </script>
 </body>
 
