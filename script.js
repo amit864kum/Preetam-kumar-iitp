@@ -60,6 +60,12 @@
                         behavior: 'smooth'
                     });
                 }
+
+                // Close the mobile menu after clicking a link
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
             });
         });
 
