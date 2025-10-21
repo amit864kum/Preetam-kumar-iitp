@@ -1238,6 +1238,7 @@ body {
     }
 
     .nav-menu li {
+        width: 100%;
     }
 
     .nav-menu>li>a {
@@ -1245,7 +1246,6 @@ body {
         font-size: 18px;
         border-radius: 12px;
         margin-bottom: 8px;
-        text-align: center;
     }
 
     /* Dropdown specific for mobile */
@@ -1288,11 +1288,12 @@ body {
     }
 
     .dropdown-menu a {
-        padding: 16px 20px 16px 40px;
+        padding: 16px 20px;
         /* Indent sub-menu items */
         margin: 0;
         border-radius: 0;
         font-size: 17px;
+        text-align: center;
     }
 
     .dropdown-menu a:hover {
