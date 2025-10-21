@@ -1223,8 +1223,8 @@ body {
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(25px);
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+        justify-content: center;
+        align-items: center;
         padding: 20px;
         gap: 0;
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1246,7 +1246,7 @@ body {
         font-size: 18px;
         border-radius: 12px;
         margin-bottom: 8px;
-        text-align: left;
+        text-align: center;
     }
 
     /* Dropdown specific for mobile */
