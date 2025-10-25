@@ -47,9 +47,9 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 80px;
+    position: relative;
 }
 
 .navbar-brand {
@@ -65,9 +65,10 @@ body {
 
 .nav-menu {
     display: flex;
+    justify-content: center;
     list-style: none;
     gap: 0;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -169,7 +170,10 @@ body {
     border-radius: 8px;
     background: rgba(30, 60, 114, 0.1);
     transition: all 0.3s ease;
-    position: relative;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 48px;
     height: 48px;
     justify-content: center;
@@ -1209,7 +1213,11 @@ body {
 
 /* RESPONSIVE DESIGN */
 /* Enhanced Mobile Menu */
-@media (max-width: 968px) {
+@media (max-width: 992px) {
+    .nav-container {
+        justify-content: center;
+    }
+
     .menu-toggle {
         display: flex;
     }
@@ -1260,7 +1268,7 @@ body {
     }
 
     .dropdown-menu {
-        position: static;
+        position: relative;
         background: rgba(30, 60, 114, 0.05);
         backdrop-filter: none;
         border-radius: 12px;
@@ -1279,6 +1287,10 @@ body {
         /* Override desktop styles */
         padding: 0;
         transition: max-height 0.4s ease, padding 0.4s ease;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .dropdown.open>.dropdown-menu {
