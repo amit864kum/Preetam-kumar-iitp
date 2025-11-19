@@ -1474,7 +1474,9 @@ body {
     line-height: 1.6;
     transition: transform 0.6s ease, background 0.3s ease, color 0.3s ease;
 }
-
+.news-wrapper p a{
+    text-decoration: none;
+}
 .news-wrapper p:hover {
     background: rgba(255, 215, 0, 0.15);
     color: var(--primary-color);
