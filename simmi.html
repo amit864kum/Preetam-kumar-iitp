@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simmi Perveen | PhD Scholar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           GLOBAL STYLES
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e3c72;
+            --secondary-color: #2a5298;
+            --accent-color: #ffd700;
+            --text-dark: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --bg-light: #f8f9fa;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* =========================================
+           MODERN HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 120px 30px 60px;
+            color: white;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #ffd700; animation: floatBlob 15s infinite alternate; }
+        .blob-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #00d2ff; animation: floatBlob 20s infinite alternate-reverse; }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-content {
+            animation: slideUpFade 1s ease-out;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #fff, #a5c9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-role {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 35px;
+            max-width: 550px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 20px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
+            background: #ffe44d;
+        }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            border-color: white;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .bg-circle {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            animation: spin 30s linear infinite;
+            z-index: -1;
+        }
+
+        .profile-frame {
+            position: relative;
+            width: 380px;
+            height: 420px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            padding: 15px;
+            transform: rotate(-3deg);
+            transition: transform 0.5s ease;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            animation: floatCard 6s ease-in-out infinite;
+        }
+
+        .profile-frame:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .float-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 3;
+        }
+        .icon-1 { top: -20px; right: -20px; animation: floatIcon 4s ease-in-out infinite; }
+        .icon-2 { bottom: 40px; left: -30px; animation: floatIcon 5s ease-in-out infinite 1s; }
+        .icon-3 { top: 50%; right: -40px; animation: floatIcon 6s ease-in-out infinite 0.5s; }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+            gap: 10px;
+            animation: bounce 2s infinite;
+        }
+        .mouse {
+            width: 26px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            position: relative;
+        }
+        .wheel {
+            width: 4px;
+            height: 8px;
+            background: white;
+            border-radius: 2px;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollWheel 1.5s infinite;
+        }
+
+        /* =========================================
+           CONTENT SECTIONS
+           ========================================= */
+        .section {
+            padding: 100px 30px;
+            background: var(--white);
+        }
+        
+        .section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- SECTION TITLE STYLES (EXACTLY LIKE INDEX.HTML) --- */
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 80px;
+            position: relative;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            padding: 0 15px;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        /* Top Small Line */
+        .section-title::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 6px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+
+        /* Bottom Wide Line */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            border-radius: 2px;
+        }
+
+        /* Responsibility/Education Cards */
+        .responsibility-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .responsibility-item {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .responsibility-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .responsibility-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .responsibility-year {
+            font-weight: 600;
+            color: #d4af37;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .bio-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+            text-align: justify;
+            border: 1px solid #eee;
+        }
+
+        /* =========================================
+           FOOTER STYLES (MATCHING INDEX.HTML)
+           ========================================= */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50, #3c5c78);
+            color: white;
+            padding: 60px 30px 20px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--secondary-color));
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-section {
+            flex: 1 1 280px;
+            min-width: 280px;
+        }
+
+        .footer-map iframe {
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            height: 100%;
+            min-height: 250px;
+            filter: none;
+            border: none;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info, .quick-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li, .quick-links li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            opacity: 0.9;
+        }
+
+        .contact-info i, .quick-links i {
+            color: var(--accent-color);
+            width: 20px;
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quick-links a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .footer-bottom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .developer-credit a {
+            color: var(--accent-color);
+            font-weight: 600;
+            opacity: 0.9;
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes floatBlob { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+        @keyframes slideUpFade { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes floatCard { 0%, 100% { transform: rotate(-3deg) translateY(0); } 50% { transform: rotate(-3deg) translateY(-15px); } }
+        @keyframes floatIcon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); } 40% { transform: translateY(-10px) translateX(-50%); } 60% { transform: translateY(-5px) translateX(-50%); } }
+        @keyframes scrollWheel { 0% { top: 6px; opacity: 1; } 100% { top: 20px; opacity: 0; } }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 50px; padding-top: 40px; }
+            .hero-content { order: 2; display: flex; flex-direction: column; align-items: center; }
+            .hero-image-wrapper { order: 1; }
+            .hero-description { border-left: none; padding-left: 0; }
+            .nav-menu { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background: white; flex-direction: column; padding-top: 50px; transition: 0.3s; }
+            .nav-menu.active { left: 0; }
+            .menu-toggle { display: block; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .social-links { justify-content: center; }
+            .footer-bottom-content { flex-direction: column; gap: 10px; text-align: center; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2.5rem; }
+            .profile-frame { width: 280px; height: 320px; }
+            .bg-circle { width: 300px; height: 300px; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="navbar-brand">Simmi Perveen</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#biography">Biography</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <i class="fas fa-bolt"></i> PhD Research Scholar
+                </div>
+                <h1 class="hero-title">Simmi Perveen</h1>
+                <h2 class="hero-role">Electrical Engineering, IIT Patna</h2>
+                <p class="hero-description">
+                    Specializing in next-generation wireless systems, with a focus on RIS-assisted full duplex communication. 
+                    Advancing the future of connectivity under the supervision of Prof. Preetam Kumar.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#biography" class="btn btn-primary">
+                        View Biography <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn btn-glass">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="bg-circle"></div>
+                <div class="float-icon icon-1"><i class="fas fa-wifi"></i></div>
+                <div class="float-icon icon-2"><i class="fas fa-book-open"></i></div>
+                <div class="float-icon icon-3"><i class="fas fa-microscope"></i></div>
+                <div class="profile-frame">
+                    <img src="img/Simmi.jpg" alt="Simmi Perveen">
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="responsibility-list">
+                <div class="responsibility-item">
+                    <div class="responsibility-title">PhD in Electrical Engineering (Pursuing)</div>
+                    <div class="responsibility-year">2020 - Present</div>
+                    <div>Indian Institute of Technology (IIT) Patna, Bihar</div>
+                    <div>Expected Completion: 2025</div>
+                </div>
+
+                <div class="responsibility-item">
+                    <div class="responsibility-title">M.Tech in Electronics and Communication</div>
+                    <div class="responsibility-year">2019</div>
+                    <div>Jamia Millia Islamia, New Delhi, India</div>
+                    <div>Specialization in Wireless Communication</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="biography">
+        <div class="container">
+            <h2 class="section-title">Biography</h2>
+            <div class="bio-content">
+                <p>
+                    Simmi Perveen is currently a PhD research scholar in the Department of Electrical Engineering at the
+                    Indian Institute of Technology (IIT) Patna. She joined the institute in 2020.
+                    <br><br>
+                    Her research interests include <strong>reconfigurable intelligent surface (RIS)</strong>-assisted full-duplex communication systems,
+                    RIS-assisted communication with index modulation, RIS-assisted ambient backscatter communication, 
+                    and RIS-assisted integrated sensing and communication.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html#phd-students" class="btn btn-primary" style="color: #1e3c72;">
+                    <i class="fas fa-arrow-left"></i> Return to PhD Students
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.0820172450526!2d84.84872167522305!3d25.535644777494607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed577f6954a4ab%3A0x6ce8f1b9fc2aa02a!2sIndian%20Institute%20of%20Technology%2C%20Patna!5e0!3m2!1sen!2sin!4v1730645448260!5m2!1sen!2sin"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="footer-section footer-about">
+                <h3>Simmi Perveen</h3>
+                <p>PhD Research Scholar<br>
+                    Wireless Communication Research Lab (WCRL)<br>
+                    Department of Electrical Engineering, IIT Patna
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>Contact Information</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> simmi_2021ee34@iitp.ac.in</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Block 3, Dept. of EE<br>IIT Patna, Bihar 801106</li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Back to Lab Home</a></li>
+                    <li><a href="index.html#phd-students"><i class="fas fa-user-graduate"></i> Colleagues</a></li>
+                    <li><a href="index.html#research"><i class="fas fa-microscope"></i> Research Areas</a></li>
+                    <li><a href="index.html#journal-publications"><i class="fas fa-file-alt"></i> Publications</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>© 2025 Simmi Perveen. All rights reserved. | IIT Patna</p>
+                <p class="developer-credit">Maintained by <a href="#phd-students">Simmi Perveen</a></p>
+                <p class="developer-credit">Designed and Developed by <a href="https://amit-three.vercel.app/" target="_blank">Amit Kumar</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
